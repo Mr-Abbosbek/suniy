@@ -1,0 +1,181 @@
+@media(max-width: 1340.9px){
+  .all-row{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  .blog-container{
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+}
+
+/* lg  */
+
+@media(max-width: 1199.9px) and (min-width: 992px){
+  .all-row{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  .blog-container{
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+  .spinner{
+    top: 76px !important;
+  }
+}
+
+/* md  */
+
+@media(max-width: 991.9px){
+  .singleBlog-blogs img{
+    height: 300px !important;
+  }
+  .spinner{
+    top: 74px !important;
+  }
+}
+
+/* sm */
+
+@media(max-width: 767.9px){
+  .all-div{
+    justify-content: center;
+    grid-gap: 40px !important;
+  }
+  .singleBlog-blogs{
+    padding: 0 23px !important;
+  }
+  .form .search-icon{
+    margin-left: 25px !important;
+  }
+  .clear-icon{
+    margin-left: 265px !important;
+  }
+  .form input{
+    width: 300px !important;
+    padding: 13px 40px 13px 65px !important;
+    margin-right: 10px !important;
+  }
+  .form select{
+    margin-top: 50px !important;
+  }
+  .singleBlog-blogs img{
+    height: 100% !important;
+  }
+  .spinner{
+    top: 73.5px !important;
+  }
+  .content_box_404 p, .link_404{
+    font-size: 15px !important;
+  }
+}
+
+/* xs */
+
+@media(max-width: 575.9px){
+  .header-div{
+    justify-content: space-between !important;
+  }
+  .all-row{
+    justify-content: center;
+    grid-gap: 40px !important;
+    padding: 0px !important;
+  }
+  .form .search-icon{
+    margin-left: -115px !important;
+  }
+  .clear-icon{
+    margin-left: 130px !important;
+  }
+  .form select{
+    margin-top: 20px !important;
+  }
+  .form input{
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+  }
+  .singleBlog-blogs, .singleBlog-button{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .spinner{
+    top: 94px !important;
+  }
+  .image-height{
+    height: 280px !important;
+  }
+}
+@media(max-width: 572.9px) and (min-width: 556px){
+  .header-div{
+    justify-content: space-between !important;
+  }
+  .all-row{
+    justify-content: center;
+    grid-gap: 40px !important;
+    padding: 0px !important;
+  }
+  .form .search-icon{
+    margin-left: -115px !important;
+  }
+  .clear-icon{
+    margin-left: 130px !important;
+  }
+  .form select{
+    margin-top: 20px !important;
+  }
+  .form input{
+    margin-left: 20px !important;
+  }
+}
+
+
+@media(max-width: 555.9px){
+  .form .search-icon{
+    margin-left: -115px !important;
+  }
+  .clear-icon{
+    margin-left: 125px !important;
+  }
+  .form select{
+    margin-top: 20px !important;
+  }
+  .form input{
+    margin-left: 10px !important;
+  }
+}
+
+
+@media(max-width: 508.9px){
+  .header-div{
+    justify-content: center !important;
+    text-align: center;
+  }
+  .header-div h2, .header-div .darkBtn {
+    width: 100%;
+  }
+  .luna{
+    margin-left: 0px !important;
+  }
+  .form .search-icon{
+    margin-left: -105px !important;
+  }
+  .clear-icon{
+    margin-left: 115px !important;
+  }
+  .form input{
+    width: 280px !important;
+    padding: 13px 45px 13px 65px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .form select{
+    margin-top: 20px !important;
+  }
+}
