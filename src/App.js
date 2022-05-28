@@ -12,6 +12,7 @@ function App() {
   const dispatch = useDispatch();
   const [select, setSelect] = useState("");
   const [mode, setMode] = useState(false);
+  const [searchName, setSearchName] = useState("");
   // const [fetchPost]  = useFetching(async ()=>{
   //   const data = await PostServerApi.getAllPost()
   //         .catch((e)=>console.log("Error", e.message));
@@ -31,6 +32,8 @@ function App() {
           setSelect(commandData.data);
         } else if (commandData.command === "mode") {
           setMode(commandData.data);
+        } else if (commandData.command === "counter") {
+          setSearchName(commandData.data);
         }
       }
     });
@@ -38,7 +41,7 @@ function App() {
 
   const AllBlogs = () => {
     return(
-      <AllBlogList region={select} />
+      <AllBlogList region={select} searchName={searchName} />
     )
   }
 
