@@ -15,7 +15,7 @@ function AllBlogs({ region }) {
 
   const selectRegion = useMemo(() => {
     if (select.option.length) {
-      if (select.option === "All") {
+      if (select.option === "All" || select.option === "all") {
         return post;
       }
       setFilter({ query: "" });
