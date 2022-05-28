@@ -3,20 +3,22 @@ import { useSelector } from "react-redux";
 import Blogs from "./Blogs";
 import FormList from "./FormList";
 
-function AllBlogs({region}) {
-
-  const post = useSelector(state => state.allCounters.counter);
+function AllBlogs({ region }) {
+  const post = useSelector((state) => state.allCounters.counter);
 
   const [filter, setFilter] = useState({ sort: "", query: "" });
-  const [select, setSelect] = useState({option: ""});
-  
-  useEffect(()=>{
-    setSelect({option: `${region}`});
-  },[region])
+  const [select, setSelect] = useState({ option: "" });
+
+  useEffect(() => {
+    setSelect({ option: `${region}` });
+  }, [region]);
 
   const selectRegion = useMemo(() => {
-      if (select.option.length) {
-      setFilter({query: "" })
+    if (select.option.length) {
+      if (select.option === "All") {
+        return post;
+      }
+      setFilter({ query: "" });
       const newItem = [...post].filter((item) => item.region === select.option);
       return newItem;
     }
@@ -38,20 +40,22 @@ function AllBlogs({region}) {
     );
   }, [filter.query, sortedPosts]);
 
-
-
   return (
     <div>
-      <FormList filter={filter} setFilter={setFilter} select={select} setSelect={setSelect} />
-       
-        {
-          (filter.query)
-          ? <Blogs posts={sortedAndSearchPosts} /> :
-          (select.option)
-          ? <Blogs posts={selectRegion}   />
-          : <Blogs posts={post} />
-        }
-        
+      <FormList
+        filter={filter}
+        setFilter={setFilter}
+        select={select}
+        setSelect={setSelect}
+      />
+
+      {filter.query ? (
+        <Blogs posts={sortedAndSearchPosts} />
+      ) : select.option ? (
+        <Blogs posts={selectRegion} />
+      ) : (
+        <Blogs posts={post} />
+      )}
     </div>
   );
 }
