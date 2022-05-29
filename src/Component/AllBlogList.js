@@ -3,16 +3,21 @@ import { useSelector } from "react-redux";
 import Blogs from "./Blogs";
 import FormList from "./FormList";
 
-function AllBlogs({ region, searchName }) {
+function AllBlogs({ voice, bool }) {
   const post = useSelector((state) => state.allCounters.counter);
 
   const [filter, setFilter] = useState({ sort: "", query: "" });
   const [select, setSelect] = useState({ option: "" });
 
   useEffect(() => {
-    setSelect({ option: `${region}` });
-    setFilter({query: `${searchName}`})
-  }, [region, searchName]);
+    if (bool === false) {
+      setFilter({ query: "" });
+      setSelect({ option: `${voice}` });
+    } else {
+      setSelect({ option: "" });
+      setFilter({query: `${voice}`});
+    }
+  }, [bool, voice]);
 
   const selectRegion = useMemo(() => {
     if (select.option.length) {

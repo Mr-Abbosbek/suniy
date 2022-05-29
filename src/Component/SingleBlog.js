@@ -212,7 +212,7 @@ function SingleBlog() {
                 </Row>
               </Col>
             </Row>
-            <Row className="border m-0 pb-5">
+            <Row className="border m-0">
               <Col className="p-0" style={{ height: "400px" }}>
                 <YMaps className="w-100">
                   <Map

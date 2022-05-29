@@ -10,9 +10,9 @@ import alanBtn from "@alan-ai/alan-sdk-web";
 
 function App() {
   const dispatch = useDispatch();
-  const [select, setSelect] = useState("");
   const [mode, setMode] = useState(false);
-  const [searchName, setSearchName] = useState("");
+  const [bool, setBool] = useState(false);
+  const [voice, setVoice] = useState('');
   // const [fetchPost]  = useFetching(async ()=>{
   //   const data = await PostServerApi.getAllPost()
   //         .catch((e)=>console.log("Error", e.message));
@@ -28,12 +28,11 @@ function App() {
       onCommand: (commandData) => {
         if (commandData.command === 'getBase') {
           console.log(commandData.data);
-        } else if (commandData.command === "select") {
-          setSelect(commandData.data);
         } else if (commandData.command === "mode") {
           setMode(commandData.data);
-        } else if (commandData.command === "counter") {
-          setSearchName(commandData.data);
+        } else if (commandData.command === "voice") {
+          setVoice(commandData.data);
+          setBool(commandData.bool);
         }
       }
     });
@@ -41,7 +40,7 @@ function App() {
 
   const AllBlogs = () => {
     return(
-      <AllBlogList region={select} searchName={searchName} />
+      <AllBlogList voice={voice} bool={bool} />
     )
   }
 
